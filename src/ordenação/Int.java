@@ -2,7 +2,7 @@ package ordenação;
 
 import java.util.Scanner;
 
-public class String {
+public class Int {
 
 	public static void main(java.lang.String[] args) {
 	Scanner sc = new Scanner(System.in);
