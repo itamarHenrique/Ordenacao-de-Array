@@ -17,6 +17,8 @@ public class String {
 	
 	mostrarArray(num);
 	
+	pesquisaBinaria(num);
+	
 	sc.close();
 }
 
@@ -37,5 +39,41 @@ public class String {
 		for (int i : array) {
 			System.out.println(i);
 		}
+			
 	}
+	
+	public static void pesquisaBinaria(int[] array) {
+		Scanner sc = new Scanner(System.in);
+		boolean acha = false;
+		int inicio = 0;
+		int fim = array.length - 1;
+		int meio;
+		int procurar;
+		
+		System.out.print("Qual numero você quer procurar? ");
+		procurar = sc.nextInt();
+		
+		while(inicio <= fim) {
+			meio = (int)((inicio + fim) / 2); //Como os indices em só possuem numeros inteiros, queremos apenas os numeros inteiros
+			
+			if(array[meio] == procurar) {
+				acha = true;
+				break;
+			}else if(array[meio] < procurar) {
+				inicio = meio + 1;
+			}else {
+				fim = meio - 1;
+			}
+			
+		}
+		
+		if(acha == true) {
+			System.out.println(procurar + " foi localizado.");
+		}else {
+			System.out.println(procurar + " nao foi localizado.");
+		}
+		sc.close();
+	}
+	
+	
 }
