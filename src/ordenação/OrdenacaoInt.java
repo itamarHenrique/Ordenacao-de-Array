@@ -54,7 +54,7 @@ public class OrdenacaoInt {
 		procurar = sc.nextInt();
 		
 		while(inicio <= fim) {
-			meio = (int)((inicio + fim) / 2); //Como os indices em só possuem numeros inteiros, queremos apenas os numeros inteiros
+			meio = (int)((inicio + fim) / 2); //Como os indices só possuem numeros inteiros, queremos apenas os numeros inteiros
 			
 			if(array[meio] == procurar) {
 				acha = true;
